@@ -1,6 +1,5 @@
 import React from "react";
 import { Text, View, StyleSheet } from "react-native";
-import tailwind from "tailwind-rn";
 
 const DeckInfo = ({ title, questionsNum }) => {
   return (

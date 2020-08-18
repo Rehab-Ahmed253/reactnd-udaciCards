@@ -19,7 +19,7 @@ const AddDeck = ({ navigation, handleAddDeckTitle }) => {
   const handleSubmit = () => {
     handleAddDeckTitle(title);
     setTitle("");
-    navigation.navigate("DeckScreen", { title });
+    navigation.navigate("DeckScreen", { title, questionsNum: 0 });
   };
   return (
     <KeyboardAvoidingView
@@ -28,7 +28,11 @@ const AddDeck = ({ navigation, handleAddDeckTitle }) => {
       <View style={styles.container}>
         <View>
           <Text>What is the title of your new deck?</Text>
-          <TextInput style={styles.textinput} onChangeText={handleTitle} />
+          <TextInput
+            style={styles.textinput}
+            value={title}
+            onChangeText={handleTitle}
+          />
         </View>
         <View style={styles.button}>
           <Button

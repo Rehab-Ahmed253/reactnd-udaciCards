@@ -14,10 +14,10 @@ const DeckScreen = ({ handleRemoveDeck, navigation, route }) => {
         <Text style={styles.text}>{route.params.title}</Text>
         <Text style={styles.text}>
           {route.params.sumQuestion
-            ? route.params.questionsNum + route.params.sumQuestion
-            : route.params.questionsNum || 0}
+            ? route.params.sumQuestion
+            : route.params.questionsNum}
           {route.params.sumQuestion
-            ? route.params.questionsNum + route.params.sumQuestion === 1
+            ? route.params.sumQuestion === 1
               ? " card"
               : " cards"
             : route.params.questionsNum === 1
@@ -31,6 +31,9 @@ const DeckScreen = ({ handleRemoveDeck, navigation, route }) => {
           onPress={() =>
             navigation.navigate("AddCardScreen", {
               title: route.params.title,
+              questionsNum: route.params.sumQuestion
+                ? route.params.sumQuestion
+                : route.params.questionsNum,
             })
           }
         >

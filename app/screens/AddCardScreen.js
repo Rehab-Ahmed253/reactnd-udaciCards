@@ -28,16 +28,20 @@ const AddCard = ({ handleAddCardToDeck, route, navigation }) => {
     handleAddCardToDeck(route.params.title, card);
     setQuestion("");
     setAnswer("");
-    navigation.navigate("DeckScreen", { sumQuestion: 1 });
+    navigation.navigate("DeckScreen", {
+      sumQuestion: 1 + route.params.questionsNum,
+    });
   };
   return (
     <View style={styles.container}>
       <TextInput
+        value={question}
         style={styles.textinput}
         onChangeText={handleQuestion}
         placeholder="Question"
       />
       <TextInput
+        value={answer}
         style={styles.textinput}
         onChangeText={handleAnswer}
         placeholder="Answer"

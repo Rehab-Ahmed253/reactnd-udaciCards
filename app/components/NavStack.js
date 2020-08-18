@@ -1,10 +1,6 @@
 import "react-native-gesture-handler";
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
-
-//import AddCard from "./AddCard";
-//import Quiz from "./Quiz";
-//import Deck from "./Deck";
 import Home from "./Home";
 import AddCardScreen from "../screens/AddCardScreen";
 import DeckScreen from "../screens/DeckScreen";
