@@ -28,7 +28,7 @@ const AddCard = ({ handleAddCardToDeck, route, navigation }) => {
     handleAddCardToDeck(route.params.title, card);
     setQuestion("");
     setAnswer("");
-    navigation.navigate("Deck", { sumQuestion: 1 });
+    navigation.navigate("DeckScreen", { sumQuestion: 1 });
   };
   return (
     <View style={styles.container}>

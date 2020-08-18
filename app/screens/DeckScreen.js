@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, Card } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 import { connect } from "react-redux";
 import { handleRemoveDeck } from "../store/decks";
 
